@@ -1,27 +1,29 @@
 # FormsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+App with examples and notes on how to implement reactive forms & template forms w/ Angular
 
-## Development server
+## Tools
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Validations (sync, async), validation services.
 
-## Code scaffolding
+- Form state
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Customized & reactive error messages
 
-## Build
+- Lazyloading
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- FormBuilder
 
-## Running unit tests
+- FormGroups & formArray
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Template driven
 
-## Running end-to-end tests
+- ViewChild
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Two way databinding
 
-## Further help
+- Dynamic forms
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Checks, radios & switches
+
+- Custom directives
