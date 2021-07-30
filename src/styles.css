@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: lavender;
+  margin: 0 25px;
+  box-sizing: border-box;
+}
+
+li.list-group-item {
+  cursor: pointer
+}
+
+li.list-group-item.active {
+  background-color: #73ad9f;
+  border-color: #73ad9f;
+}
+
+button.btn.btn-primary {
+  background-color: #73ad9f;
+  border-color: #73ad9f;
+}
+
+button.btn.btn-outline-primary {
+  border-color: #73ad9f;
+  color: #73ad9f;
+}
+
+button.btn.btn-outline-primary:focus {
+  background-color: rgb(115, 173, 159);
+  box-shadow: 0 0 0 .25rem rgba(115, 173, 159, .5);
+  color: #ffff;
+}
+
+button.btn.btn-outline-primary:active {
+  background-color: rgb(115, 173, 159);
+  box-shadow: 0 0 0 .25rem rgba(115, 173, 159, .5);
+  color: #ffff;
+}
+
+button.btn.btn-outline-primary:hover {
+  background-color: rgb(115, 173, 159);
+  color: #ffff;
+}
+
+input.form-check-input:checked {
+  background-color: rgb(115, 173, 159);
+  border-color: rgb(115, 173, 159);
+}

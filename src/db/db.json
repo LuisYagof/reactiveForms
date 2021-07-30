@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "luisyagofdez@gmail.com",
+      "username": "LuisYagoF"
+    },
+    {
+      "id": 2,
+      "email": "luis.yago.fernandez@outlook.com",
+      "username": "LuisYagoFd"
+    },
+    {
+      "id": 3,
+      "email": "luisyagofdez@gmail.ces",
+      "username": "LuisYagoFdez"
+    }
+  ]
+}

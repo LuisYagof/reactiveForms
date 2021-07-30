@@ -1,0 +1,99 @@
+<h2>Reactive: dynamics</h2>
+<hr>
+
+
+<form [formGroup]="myForm"
+  autocomplete="off"
+  (ngSubmit)="submitForm()">
+
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">
+      Name
+    </label>
+    <div class="col-sm-9">
+      <input type="text"
+        class="form-control"
+        placeholder="Name"
+        formControlName="name">
+      <span class="form-text text-danger"
+        *ngIf="fieldIsInvalid('name')">
+        This input is required
+      </span>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">
+      Add
+    </label>
+    <div class="col-sm-9">
+
+      <div class="input-group">
+
+        <input type="text"
+          class="form-control"
+          [formControl]="newFav"
+          (keyup.enter)="addFav()"
+          placeholder="Add favorite">
+
+        <button class="btn btn-outline-primary"
+          type="button"
+          (click)="addFav()">
+          Add
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">
+      Favorites
+    </label>
+    <div class="col-sm-9"
+      formArrayName="favorites">
+
+      <div class="input-group mb-1"
+        *ngFor="let favorite of favsArr.controls; let i = index">
+        <input class="form-control"
+          [formControlName]="i">
+        <button class="btn btn-outline-danger"
+          type="button"
+          (click)="deleteFav(i)">
+          Delete
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="submit"
+        class="btn btn-primary float-end">
+        Save
+      </button>
+    </div>
+  </div>
+
+</form>
+
+
+<span>NAME</span>
+<pre>{{myForm.controls.name.value | json}}</pre>
+
+<span>FAVS</span>
+<pre>{{myForm.controls.favorites.value | json}}</pre>
+
+<span>VALID</span>
+<pre>{{myForm.valid}}</pre>
+
+<span>VALUE</span>
+<pre>{{myForm.value | json}}</pre>
+
+<span>NEWFAV</span>
+<pre>{{newFav.value}}</pre>
+
+<span>NEWFAV VALID</span>
+<pre>{{newFav.valid}}</pre>

@@ -1,0 +1,111 @@
+<h2>Template: switches</h2>
+<hr>
+
+<form (ngSubmit)="save"
+  #myForm="ngForm"
+  autocomplete="off">
+
+  <div class="row mb-3">
+    <label class="col-sm-3 col-form-label">
+      Gender
+    </label>
+    <div class="col-sm-9">
+
+      <div class="form-check">
+        <input class="form-check-input"
+          type="radio"
+          name="genreRadio"
+          [(ngModel)]="person.gender"
+          id="boy"
+          value="B"
+          required>
+        <label class="form-check-label"
+          for="boy">
+          Boy
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+          type="radio"
+          name="genreRadio"
+          [(ngModel)]="person.gender"
+          id="girl"
+          value="G"
+          required>
+        <label class="form-check-label"
+          for="girl">
+          Girl
+        </label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label class="col-sm-3 col-form-label">
+        Notifications
+      </label>
+      <div class="col-sm-9">
+
+        <div class="form-check form-switch mt-2">
+          <input class="form-check-input"
+            type="checkbox"
+            [(ngModel)]="person.notifications"
+            name="notifications"
+            id="notifications">
+            <label class="form-check-label"
+            for="notifications">Activate notifications</label>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">
+          Terms & conditions
+        </label>
+        <div class="col-sm-9">
+          <div class="form-check">
+            <input class="form-check-input"
+            type="checkbox"
+            value=""
+            [(ngModel)]="terms"
+            name="terms"
+            id="terms"
+            required>
+            <label class="form-check-label"
+            for="terms">
+            Terms
+          </label>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="submit"
+        class="btn btn-primary float-end"
+        [disabled]="myForm.invalid"
+        (click)="save()">
+        Save
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<span>Form Value</span>
+<pre>{{ myForm.value | json }}</pre>
+
+<span>Person</span>
+<pre>{{ person | json }}</pre>
+
+<span>Terms</span>
+<pre>{{ myForm.controls?.terms?.errors | json }}</pre>
+
+<span>Valid</span>
+<pre>{{ myForm.valid }}</pre>
+
+<span>Conditions: </span>
+<pre>{{ 0 }}</pre>

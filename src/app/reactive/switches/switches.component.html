@@ -1,0 +1,101 @@
+<h2>Template: switches</h2>
+<hr>
+
+<form autocomplete="off"
+  [formGroup]="myForm"
+  (ngSubmit)="submitForm()">
+
+  <div class="row mb-3">
+    <label class="col-sm-3 col-form-label">
+      Gender
+    </label>
+    <div class="col-sm-9">
+
+      <div class="form-check">
+        <input class="form-check-input"
+          type="radio"
+          formControlName="gender"
+          id="boy"
+          value="B">
+        <label class="form-check-label"
+          for="boy">
+          Boy
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+          type="radio"
+          formControlName="gender"
+          id="girl"
+          value="G">
+        <label class="form-check-label"
+          for="girl">
+          Girl
+        </label>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label class="col-sm-3 col-form-label">
+        Notifications
+      </label>
+      <div class="col-sm-9">
+
+        <div class="form-check form-switch mt-2">
+          <input class="form-check-input"
+            type="checkbox"
+            formControlName="notifications"
+            id="notifications">
+          <label class="form-check-label"
+            for="notifications">Activate notifications</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label class="col-sm-3 col-form-label">
+        Terms & conditions
+      </label>
+      <div class="col-sm-9">
+        <div class="form-check">
+          <input class="form-check-input"
+            type="checkbox"
+            formControlName="terms"
+            id="terms">
+          <label class="form-check-label"
+            for="terms">
+            Terms
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="submit"
+        class="btn btn-primary float-end">
+        Save
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<span>Form Value</span>
+<pre>{{ myForm.value | json }}</pre>
+
+<span>Person</span>
+<pre>{{ person | json }}</pre>
+
+<span>Terms</span>
+<pre>{{ myForm.controls?.terms?.errors | json }}</pre>
+
+<span>Valid</span>
+<pre>{{ myForm.valid }}</pre>
+
+<span>Conditions: </span>
+<pre>{{ 0 }}</pre>
